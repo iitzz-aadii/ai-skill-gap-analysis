@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: skill-gap-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: skill_gap_analyzer
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - skill-gap-network
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: skill-gap-backend
+    restart: unless-stopped
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017
+      - DATABASE_NAME=skill_gap_analyzer
+      - ENVIRONMENT=production
+      - DEBUG=False
+    env_file:
+      - ./backend/.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/uploads:/app/uploads
+    depends_on:
+      - mongodb
+    networks:
+      - skill-gap-network
+
+  # Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: skill-gap-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - skill-gap-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  skill-gap-network:
+    driver: bridge

@@ -1,0 +1,65 @@
+JOHN DOE
+Full Stack Developer
+Email: john.doe@example.com | Phone: (555) 123-4567
+LinkedIn: linkedin.com/in/johndoe | GitHub: github.com/johndoe
+
+PROFESSIONAL SUMMARY
+Results-driven Full Stack Developer with 3+ years of experience building scalable web applications. 
+Proficient in React, Node.js, and Python with a strong foundation in software engineering principles. 
+Passionate about creating efficient, user-friendly solutions and staying current with emerging technologies.
+
+TECHNICAL SKILLS
+Languages: JavaScript, Python, TypeScript, HTML, CSS, SQL
+Frontend: React, Vue.js, HTML5, CSS3, TailwindCSS, Bootstrap
+Backend: Node.js, Express, Django, Flask
+Databases: MongoDB, PostgreSQL, MySQL
+Tools & Technologies: Git, Docker, AWS, REST API, GraphQL
+Other: Agile/Scrum, CI/CD, Jest, Unit Testing
+
+PROFESSIONAL EXPERIENCE
+
+Senior Full Stack Developer | Tech Solutions Inc. | Jan 2022 - Present
+- Developed and maintained 5+ production web applications using React and Node.js
+- Implemented RESTful APIs serving 10,000+ daily active users
+- Reduced page load time by 40% through code optimization and lazy loading
+- Collaborated with cross-functional teams using Agile methodologies
+- Mentored 2 junior developers on best practices and code review
+
+Full Stack Developer | Digital Innovations LLC | Jun 2020 - Dec 2021
+- Built responsive web applications using React, Express, and MongoDB
+- Integrated third-party APIs including payment gateways and analytics tools
+- Wrote comprehensive unit tests achieving 85% code coverage
+- Participated in code reviews and improved application performance by 25%
+- Worked directly with clients to gather requirements and deliver solutions
+
+Junior Web Developer | WebCraft Studios | Jan 2020 - May 2020
+- Created landing pages and websites using HTML, CSS, and JavaScript
+- Assisted in debugging and troubleshooting application issues
+- Learned and applied modern web development frameworks
+- Participated in daily stand-ups and sprint planning meetings
+
+EDUCATION
+
+Bachelor of Science in Computer Science
+State University | Graduated: May 2019
+GPA: 3.7/4.0
+
+PROJECTS
+
+E-Commerce Platform (Personal Project)
+- Built a full-stack e-commerce application using MERN stack
+- Implemented user authentication, shopping cart, and payment processing
+- Deployed on AWS with Docker containerization
+- Technologies: React, Node.js, Express, MongoDB, Stripe API
+
+Task Management App (Open Source)
+- Developed a collaborative task management tool with real-time updates
+- Used WebSocket for real-time collaboration features
+- Technologies: React, Socket.io, PostgreSQL
+
+CERTIFICATIONS
+- AWS Certified Developer Associate (2022)
+- MongoDB Certified Developer (2021)
+
+LANGUAGES
+English (Native), Spanish (Conversational)

@@ -1,0 +1,63 @@
+Senior AI/ML Engineer
+
+Company: AI Innovations Corp
+Location: Remote
+Type: Full-time
+
+About the Role:
+We are seeking a talented Senior AI/ML Engineer to join our growing team. You will be responsible for 
+designing, developing, and deploying machine learning models and AI solutions that power our products.
+
+Key Responsibilities:
+- Design and implement machine learning models for production environments
+- Develop and optimize deep learning architectures using TensorFlow and PyTorch
+- Build and maintain ML pipelines for data processing and model training
+- Deploy models to cloud platforms (AWS, GCP, or Azure)
+- Collaborate with cross-functional teams to integrate AI solutions
+- Monitor model performance and implement improvements
+- Mentor junior team members on ML best practices
+- Stay current with latest AI/ML research and technologies
+
+Required Skills and Qualifications:
+- 5+ years of experience in machine learning and AI development
+- Strong proficiency in Python and ML frameworks (TensorFlow, PyTorch, scikit-learn)
+- Experience with deep learning, NLP, and computer vision
+- Solid understanding of ML algorithms, statistics, and mathematics
+- Experience deploying models in production environments
+- Proficiency with cloud platforms (AWS SageMaker, GCP AI Platform, or Azure ML)
+- Experience with MLOps tools and practices
+- Strong knowledge of Docker and Kubernetes
+- Bachelor's or Master's degree in Computer Science, Mathematics, or related field
+
+Preferred Qualifications:
+- PhD in Machine Learning, AI, or related field
+- Experience with transformer models (BERT, GPT, etc.)
+- Knowledge of reinforcement learning
+- Experience with big data technologies (Spark, Hadoop)
+- Contributions to open-source ML projects
+- Published research papers in top-tier conferences
+- Experience with LLM fine-tuning and prompt engineering
+- Familiarity with Hugging Face ecosystem
+
+Technical Stack:
+- Languages: Python, SQL
+- ML/AI: TensorFlow, PyTorch, Keras, scikit-learn, XGBoost
+- NLP: spaCy, NLTK, Transformers, LangChain
+- Cloud: AWS (SageMaker, EC2, S3), GCP, Azure
+- Tools: Jupyter, Git, Docker, Kubernetes, MLflow
+- Databases: PostgreSQL, MongoDB, Redis
+- APIs: FastAPI, Flask
+
+What We Offer:
+- Competitive salary ($150k - $200k based on experience)
+- Comprehensive health benefits
+- 401(k) with company match
+- Flexible work arrangements
+- Professional development budget
+- Conference attendance opportunities
+- Latest hardware and tools
+- Collaborative and innovative work environment
+
+To Apply:
+Please submit your resume, cover letter, and links to your GitHub profile or portfolio showcasing 
+your ML/AI projects.
