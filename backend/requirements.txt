@@ -26,7 +26,6 @@ beanie==1.23.6
 passlib[bcrypt]==1.7.4
 python-jose[cryptography]==3.3.0
 
-# Utilities - Optimized versions
+# Utilities - Minimal set
 numpy==1.26.2
-scikit-learn==1.3.2
 aiofiles==23.2.1

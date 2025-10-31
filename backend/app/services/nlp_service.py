@@ -3,7 +3,13 @@ import re
 from typing import List, Dict, Tuple
 from sentence_transformers import SentenceTransformer
 import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
+
+
+def cosine_similarity_numpy(a, b):
+    """Compute cosine similarity using numpy (no sklearn needed)"""
+    a = np.array(a).reshape(1, -1)
+    b = np.array(b).reshape(1, -1)
+    return np.dot(a, b.T) / (np.linalg.norm(a) * np.linalg.norm(b))
 
 
 class NLPService:
@@ -179,7 +185,7 @@ class NLPService:
         
         try:
             embeddings = self.sentence_model.encode([text1, text2])
-            similarity = cosine_similarity([embeddings[0]], [embeddings[1]])[0][0]
+            similarity = cosine_similarity_numpy(embeddings[0], embeddings[1])[0][0]
             return float(similarity)
         except Exception as e:
             print(f"Error computing similarity: {e}")
@@ -208,7 +214,7 @@ class NLPService:
                         job_embedding = self.sentence_model.encode([job_skill])
                         for resume_skill in resume_skills:
                             resume_embedding = self.sentence_model.encode([resume_skill])
-                            similarity = cosine_similarity(job_embedding, resume_embedding)[0][0]
+                            similarity = cosine_similarity_numpy(job_embedding[0], resume_embedding[0])[0][0]
                             if similarity > 0.8:  # High similarity threshold
                                 matched_skills.append(job_skill)
                                 found_match = True
