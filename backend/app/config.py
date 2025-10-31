@@ -27,6 +27,9 @@ class Settings(BaseSettings):
     model_name: str = "gemini-1.5-flash"
     similarity_threshold: float = 0.7
     
+    # Authentication
+    jwt_secret_key: str = "CHANGE-THIS-TO-SECURE-RANDOM-VALUE-IN-PRODUCTION"
+    
     # CORS
     cors_origins: List[str] = []
     
