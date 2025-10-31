@@ -1,6 +1,7 @@
 from pydantic_settings import BaseSettings
-from typing import Optional
+from typing import Optional, List
 import os
+import json
 
 
 class Settings(BaseSettings):
@@ -27,7 +28,21 @@ class Settings(BaseSettings):
     similarity_threshold: float = 0.7
     
     # CORS
-    cors_origins: list = ["http://localhost:5173", "http://localhost:3000"]
+    cors_origins: List[str] = []
+    
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        # Parse CORS_ORIGINS from environment if it's a JSON string
+        cors_env = os.getenv("CORS_ORIGINS")
+        if cors_env:
+            try:
+                self.cors_origins = json.loads(cors_env)
+            except json.JSONDecodeError:
+                # Fallback: split by comma if not valid JSON
+                self.cors_origins = [origin.strip() for origin in cors_env.split(",")]
+        else:
+            # Default CORS origins for development
+            self.cors_origins = ["http://localhost:5173", "http://localhost:3000"]
     
     class Config:
         env_file = ".env"

@@ -3,6 +3,7 @@ from typing import Optional
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
+import os
 
 
 class TokenData(BaseModel):
@@ -18,8 +19,13 @@ class AuthService:
         # Password hashing
         self.pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
         
-        # JWT settings
-        self.SECRET_KEY = "your-secret-key-change-this-in-production"  # TODO: Move to env
+        # JWT settings - Load from environment or use secure default
+        self.SECRET_KEY = os.getenv(
+            "JWT_SECRET_KEY", 
+            "CHANGE-THIS-SECRET-KEY-IN-PRODUCTION-USE-STRONG-RANDOM-VALUE"
+        )
+        if self.SECRET_KEY == "CHANGE-THIS-SECRET-KEY-IN-PRODUCTION-USE-STRONG-RANDOM-VALUE":
+            print("WARNING: Using default JWT secret key. Set JWT_SECRET_KEY environment variable in production!")
         self.ALGORITHM = "HS256"
         self.ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7  # 7 days
     

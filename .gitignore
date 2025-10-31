@@ -144,9 +144,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
-venv/
-ENV/
 build/
 develop-eggs/
 dist/
@@ -164,26 +161,15 @@ wheels/
 *.egg
 
 # Virtual Environment
-.venv/
 venv/
+env/
 ENV/
-
-# Node
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# React / Vite
-dist/
-dist-ssr/
-*.local
+.venv
 
 # Environment variables
 .env
 .env.local
-.env.*.local
+.env.production
 
 # IDE
 .vscode/
@@ -200,7 +186,34 @@ Thumbs.db
 backend/uploads/*
 !backend/uploads/.gitkeep
 
+# Logs
+*.log
+logs/
+
 # Database
 *.db
 *.sqlite
-data/
+*.sqlite3
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Temporary files
+*.tmp
+temp/
+tmp/

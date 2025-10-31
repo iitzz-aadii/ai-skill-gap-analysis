@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from typing import List
+from typing import List, Optional
 from datetime import datetime
 from beanie import PydanticObjectId
 from app.models import UserProgress
@@ -50,9 +50,9 @@ async def get_user_progress(user_id: str):
 @router.put("/{progress_id}")
 async def update_progress(
     progress_id: str,
-    current_level: float | None = None,
-    completed_resources: List[str] | None = None,
-    notes: str | None = None
+    current_level: Optional[float] = None,
+    completed_resources: Optional[List[str]] = None,
+    notes: Optional[str] = None
 ):
     """Update skill progress"""
     try:

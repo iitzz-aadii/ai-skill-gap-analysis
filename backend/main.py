@@ -51,8 +51,29 @@ async def root():
 
 @app.get("/health")
 async def health_check():
-    """Health check endpoint"""
-    return {"status": "healthy"}
+    """Health check endpoint with database connectivity test"""
+    health_status = {
+        "status": "healthy",
+        "service": "AI Skill Gap Analyzer API",
+        "version": "1.0.0"
+    }
+    
+    # Test database connection
+    try:
+        from app.database import db
+        if db.client:
+            # Ping database
+            await db.client.admin.command('ping')
+            health_status["database"] = "connected"
+        else:
+            health_status["database"] = "not_initialized"
+            health_status["status"] = "degraded"
+    except Exception as e:
+        health_status["database"] = "error"
+        health_status["database_error"] = str(e)
+        health_status["status"] = "unhealthy"
+    
+    return health_status
 
 
 if __name__ == "__main__":
