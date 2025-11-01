@@ -94,13 +94,49 @@ export default function Layout({ children }) {
 
       {/* Footer */}
       <footer className="bg-white/80 backdrop-blur-md border-t border-neutral-200 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {/* Brand Section */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start space-x-2 mb-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-400 rounded-lg flex items-center justify-center">
+                  <Brain className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-charcoal text-lg">AI Skill Analyzer</span>
+              </div>
+              <p className="text-xs text-mediumGrey">
+                Transform your career with intelligent skill analysis powered by advanced AI
+              </p>
+            </div>
+
+            {/* Technology Stack */}
+            <div className="text-center">
+              <h3 className="text-sm font-semibold text-charcoal mb-3">Powered By</h3>
+              <div className="flex flex-wrap justify-center gap-2">
+                <span className="px-3 py-1 bg-primary-50 text-primary-600 text-xs font-medium rounded-full">Gemini AI</span>
+                <span className="px-3 py-1 bg-primary-50 text-primary-600 text-xs font-medium rounded-full">spaCy NLP</span>
+                <span className="px-3 py-1 bg-primary-50 text-primary-600 text-xs font-medium rounded-full">Sentence-BERT</span>
+              </div>
+            </div>
+
+            {/* Features */}
+            <div className="text-center md:text-right">
+              <h3 className="text-sm font-semibold text-charcoal mb-3">Features</h3>
+              <div className="text-xs text-mediumGrey space-y-1">
+                <p>✨ AI-Powered Skill Matching</p>
+                <p>📊 Personalized Gap Analysis</p>
+                <p>🎯 Custom Learning Paths</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-neutral-200 pt-6 text-center">
             <p className="text-sm text-mediumGrey">
-              © 2024 <span className="font-semibold text-charcoal">AI Skill Gap Analyzer</span> • Powered by AI & NLP
+              © 2025 <span className="font-semibold text-charcoal">AI Skill Gap Analyzer</span> • Built with React, FastAPI & MongoDB
             </p>
             <p className="text-xs text-mediumGrey mt-2">
-              Transform your career with intelligent skill analysis
+              Helping professionals bridge the gap between current skills and dream careers
             </p>
           </div>
         </div>
